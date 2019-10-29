@@ -22,7 +22,6 @@
   </nav>
   <section class="slideshow">
     <div class="slideshow-wrap">
-
       <div class="slide fade">
         <img src="https://picsum.photos/1200/448?random=1" alt="slide one" />
         <p class="caption">Lorem ipsum dolot sit SLIDE One</p>
@@ -45,18 +44,17 @@
 
       <a class="prev" onClick="plusSlides(-1)"> &#10094 </a>
       <a class="next" onClick="plusSlides(1)"> &#10095 </a>
-      
+
     </div> <!-- End slideshow-wrap-->
     <div class="dot-wrap">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>    
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
     </div>
-    
   </section>
 
-  <article class="grid-container">
+  <main class="grid-container">
     <div class="card one">
       <div class="thumb"></div>
       <hr>
@@ -64,11 +62,23 @@
         <h3>Card Title</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
           dolore magna aliqua.</p>
-        <button class="more">More</button>
+        <button class="more modal-button" data-modal="#C1">More</button>
       </div>
       <!--end .content-->
     </div>
-    <!--end .card-->
+    <!--end card on-->
+    <div id="C1" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close-modal">X</span>
+        <div class="modal-body">
+          <img src="https://picsum.photos/1200/448?random=2" />
+          <div clas="modal-text">
+            <h3>African Grey Parrot</h3>
+            <p>The aftican grey parrot......</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="card two">
       <div class="thumb"></div>
       <hr>
@@ -201,11 +211,11 @@
       <!--end .content-->
     </div>
     <!--end .card-->
-  </article>
-  <footer>
-    <p>&copy; 2019, Eric York</p>
-  </footer>
-  <script src="js/page.js"></script>
+    </article>
+    <footer>
+      <p>&copy; 2019, Eric York</p>
+    </footer>
+    <script src="js/page.js"></script>
 </body>
 
 </html>

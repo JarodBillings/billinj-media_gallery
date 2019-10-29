@@ -132,25 +132,31 @@ nav a {
 .dot.active{
   background: #333;
 }
-/*--adds trigram rules
-.trigram {
-  text-decoration: none;
-  font-size: 2em;
-  display: none;
-}--*/
-/*-- adds toggle rules
-@media screen and (max-width: 767px) {
-  .topnav a {display: none;}
-  .topnav a.trigram {display: inherit; align-self: flex-end;}
-}--*/
-/*-- adds responsive rules
-@media screen and (max-width: 767px) {
-  .topnav.responsive {align-items: center;}
-  .topnav.responsive a {display: inherit;}
-  .topnav.responsive a.trigram {visibility: hidden; position: absolute; right: 3%; top: 2%;}
-  .topnav.responsive a.trigram::after {content:'\000D7'; visibility:visible; text-indent: -.5em;}
-}--*/
-/*-- adds normal rules
-@media screen and (min-width: 768px) {
-  nav {flex-direction: row;}
-}--*/
+
+.modal{
+  display: none;/*-- hidden by default --*/
+  position: fixed; /*-- doesn't move on the screen --*/
+  z-index: 1100; /*-- sets higher than anything else so modal is in the very front --*/
+  left: 0; /*-- positions at zero pixels from the left --*/
+  top: 0; /*-- positions at zero pixels from the top --*/
+  width: 100%; /*-- fills the space --*/
+  height: 100%; /*-- fills the space --*/
+  overflow: auto; /*-- handles overflow as normal. --*/
+  background-color: rgba(10, 10, 10, .4); /*--slightly transparent--*/
+}
+
+.modal-content {
+  background-color: white;
+  color: black;
+  margin: 1rem auto;
+  padding: 1em;
+  width: 92%;
+  border-radius: 4px;
+  animation: fadein .3s ease-in-out; /*-- sets animation properties: name, duration, easing --*/
+}
+
+.modal-content img {
+  margin-bottom: 1.5em;
+  width: 100%;
+  height: auto;
+}

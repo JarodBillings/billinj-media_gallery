@@ -38,3 +38,9 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+$(".modal-button").on("click", function() { // when item with class of button is clicked, fire function
+  console.log("Clicked");
+  var modal = $(this).data("modal"); // sets modal var equal to data attribute
+  $(modal).show(); // opens up modal (much code hidden here by jQuery)
+});
