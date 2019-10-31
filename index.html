@@ -24,7 +24,7 @@
     <div class="slideshow-wrap">
       <div class="slide fade">
         <img src="https://picsum.photos/1200/448?random=1" alt="slide one" />
-        <p class="caption">Lorem ipsum dolot sit SLIDE One</p>
+        <div class="caption">Lorem ipsum dolot sit SLIDE One</div>
       </div>
 
       <div class="slide fade">
@@ -46,16 +46,24 @@
       <a class="next" onClick="plusSlides(1)"> &#10095 </a>
 
     </div> <!-- End slideshow-wrap-->
-    <div class="dot-wrap">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-      <span class="dot" onclick="currentSlide(4)"></span>
+    <div class="slid-prev">
+      <span class="indicator" onclick="currentSlide(1)">
+        <img src="https://picsum.photos/1200/448?random=1" />
+      </span>
+      <span class="indicator" onclick="currentSlide(2)">
+        <img src="https://picsum.photos/1200/448?random=2" />
+      </span>
+      <span class="indicator" onclick="currentSlide(3)">
+        <img src="https://picsum.photos/1200/448?random=3" />
+      </span>
+      <span class="indicator" onclick="currentSlide(4)">
+        <img src="https://picsum.photos/1200/448?random=4" />
+      </span>
     </div>
   </section>
 
   <main class="grid-container">
-    <div class="card one">
+    <div class="card one clickable" data-modal="#C1">
       <div class="thumb"></div>
       <hr>
       <div class="card-content">

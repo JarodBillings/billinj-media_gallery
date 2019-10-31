@@ -26,7 +26,7 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("slide");
-  var dots = document.getElementsByClassName("dot");
+  var dots = document.getElementsByClassName("indicator");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -39,8 +39,13 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-$(".modal-button").on("click", function() { // when item with class of button is clicked, fire function
-  console.log("Clicked");
+$(".card").on("click", function() { // when item with class of button is clicked, fire function
   var modal = $(this).data("modal"); // sets modal var equal to data attribute
   $(modal).show(); // opens up modal (much code hidden here by jQuery)
 });
+$(".modal").on("click", function(e) { // sets up click function
+  var className = e.target.className; // var className set to event target
+  if(className === "modal" || className === "close-modal"){ // if conditions are met...
+    $(this).closest(".modal").hide(); // then hide the modal
+  } // closes if-statement
+}); // closes function
