@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta https-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>eg_boiler</title>
+  <title>Parrots of the World</title>
   <link rel="stylesheet" href="css/sanitize.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -23,24 +23,34 @@
   <section class="slideshow">
     <div class="slideshow-wrap">
       <div class="slide fade">
-        <img src="https://picsum.photos/1200/448?random=1" alt="slide one" />
-        <div class="caption">Lorem ipsum dolot sit SLIDE One</div>
+        <div class="caption">
+          <img src="pimg/card1.jpg" alt="A pair of lovebirds" />
+          <div class="caption-text">A pair of lovebirds</div>
+        </div>
       </div>
 
       <div class="slide fade">
-        <img src="https://picsum.photos/1200/448?random=2" alt="slide one" />
-        <p class="caption">Lorem ipsum dolot sit SLIDE Two</p>
+        <div class="caption">
+          <img src="pimg/card2.jpg" alt="A white cockatoo" />
+          <div class="caption-text">White Cockatoo</div>
+        </div>
+      </div>
+
+
+      <div class="slide fade">
+        <div class="caption">
+          <img src="pimg/card3.jpg" alt="Congo African Grey" />
+          <div class="caption-text">Congo African Grey</div>
+        </div>
       </div>
 
       <div class="slide fade">
-        <img src="https://picsum.photos/1200/448?random=3" alt="slide one" />
-        <p class="caption">Lorem ipsum dolot sit SLIDE Three</p>
+        <div class="caption">
+          <img src="pimg/card4.jpg" alt="Scarlet Macaw" />
+          <div class="caption-text">Scarlet Macaw</div>
+        </div>
       </div>
 
-      <div class="slide fade">
-        <img src="https://picsum.photos/1200/448?random=4" alt="slide one" />
-        <p class="caption">Lorem ipsum dolot sit SLIDE Four</p>
-      </div>
 
       <a class="prev" onClick="plusSlides(-1)"> &#10094 </a>
       <a class="next" onClick="plusSlides(1)"> &#10095 </a>
@@ -48,34 +58,82 @@
     </div> <!-- End slideshow-wrap-->
     <div class="slid-prev">
       <span class="indicator" onclick="currentSlide(1)">
-        <img src="https://picsum.photos/1200/448?random=1" />
+        <img src="pimg/card1.jpg" />
       </span>
       <span class="indicator" onclick="currentSlide(2)">
-        <img src="https://picsum.photos/1200/448?random=2" />
+        <img src="pimg/card2.jpg" />
       </span>
       <span class="indicator" onclick="currentSlide(3)">
-        <img src="https://picsum.photos/1200/448?random=3" />
+        <img src="pimg/card3.jpg" />
       </span>
       <span class="indicator" onclick="currentSlide(4)">
-        <img src="https://picsum.photos/1200/448?random=4" />
+        <img src="pimg/card4.jpg" />
       </span>
     </div>
   </section>
 
   <main class="grid-container">
+
     <div class="card one clickable" data-modal="#C1">
       <div class="thumb"></div>
       <hr>
       <div class="card-content">
-        <h3>Card Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua.</p>
+        <h3>Lovebirds</h3>
+        <p>Originating from Africa, the Lovebird gets its name from its strong bonding pair.</p>
         <button class="more modal-button" data-modal="#C1">More</button>
       </div>
-      <!--end .content-->
+    </div>
+
+    <div id="C1" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close-modal">X</span>
+        <div class="modal-body">
+          <img src="mimg/card1.jpg" />
+          <div clas="modal-text">
+            <h3>African Grey Parrot</h3>
+            <p>The aftican grey parrot......</p>
+          </div>
+        </div>
+      </div>
     </div>
     <!--end card on-->
-    <div id="C1" class="modal" style="display: none;">
+
+    <div class="card two clickable" data-modal="#C2">
+      <div class="thumb"></div>
+      <hr>
+      <div class="card-content">
+        <h3>White Cockatoo</h3>
+        <p>Found mainly on the islands of Indonesia, the White Cockatoo is a very friendly and affectionate parrot</p>
+        <button class="more">More</button>
+      </div>
+    </div>
+
+    <div id="C2" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close-modal">X</span>
+        <div class="modal-body">
+          <img src="https://picsum.photos/1200/448?random=2" />
+          <div clas="modal-text">
+            <h3>African Grey Parrot</h3>
+            <p>Occupying mainly the Congo forest of Africa, the African grey is a very intelligent parrot. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end .card-->
+
+    <div class="card three clickable" data-modal="#C3">
+      <div class="thumb"></div>
+      <hr>
+      <div class="card-content">
+        <h3>Congo African Grey</h3>
+        <p>Occupying mainly the Congo forest of Africa, the African grey is a very intelligent parrot. </p>
+        <button class="more">More</button>
+      </div>
+    </div>
+
+
+    <div id="C3" class="modal" style="display: none;">
       <div class="modal-content">
         <span class="close-modal">X</span>
         <div class="modal-body">
@@ -87,141 +145,230 @@
         </div>
       </div>
     </div>
-    <div class="card two">
-      <div class="thumb"></div>
+    <!--end .card-->
+
+    <div class="card four clickable" data-modal="#C3">
+      <div class=" thumb"></div>
       <hr>
       <div class="card-content">
-        <h3>Card Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua.</p>
+        <h3>Scarlet Macaw</h3>
+        <p>Found in the tropical rain forest of Souther America, the scarlet macaw has a very bright and colorful
+          plumage. </p>
         <button class="more">More</button>
       </div>
-      <!--end .content-->
+    </div>
+
+    <div id="C4" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close-modal">X</span>
+        <div class="modal-body">
+          <img src="https://picsum.photos/1200/448?random=2" />
+          <div clas="modal-text">
+            <h3>African Grey Parrot</h3>
+            <p>The aftican grey parrot......</p>
+          </div>
+        </div>
+      </div>
     </div>
     <!--end .card-->
-    <div class="card three">
-      <div class="thumb"></div>
+
+    <div class="card five clickable" data-modal="#C5">
+      <div class=" thumb"></div>
       <hr>
       <div class="card-content">
-        <h3>Card Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua.</p>
+        <h3>Cockatiel</h3>
+        <p>A distant cousin of the Cockatoo, Cockatiels are found in large flocks over the Australian continent</p>
         <button class="more">More</button>
       </div>
-      <!--end .content-->
+    </div>
+
+    <div id="C5" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close-modal">X</span>
+        <div class="modal-body">
+          <img src="https://picsum.photos/1200/448?random=2" />
+          <div clas="modal-text">
+            <h3>African Grey Parrot</h3>
+            <p>The aftican grey parrot......</p>
+          </div>
+        </div>
+      </div>
     </div>
     <!--end .card-->
-    <div class="card four">
+
+    <div class="card six clickable" data-modal="#C6">
       <div class="thumb"></div>
       <hr>
       <div class="card-content">
-        <h3>Card Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua.</p>
+        <h3>Budgie</h3>
+        <p>Also found in Australian is the Budgie is a very common house pet due to its colors and easy temperment</p>
         <button class="more">More</button>
       </div>
-      <!--end .content-->
+    </div>
+
+    <div id="C6" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close-modal">X</span>
+        <div class="modal-body">
+          <img src="https://picsum.photos/1200/448?random=2" />
+          <div clas="modal-text">
+            <h3>African Grey Parrot</h3>
+            <p>The aftican grey parrot......</p>
+          </div>
+        </div>
+      </div>
     </div>
     <!--end .card-->
-    <div class="card five">
+
+    <div class="card seven clickable" data-modal="#C7">
       <div class="thumb"></div>
       <hr>
       <div class="card-content">
-        <h3>Card Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua.</p>
+        <h3>Blue & Gold Macaw</h3>
+        <p>Located mainly in the tropical rain forests, the B&G Macaw gets its name from its very prominant chest and
+          back colors</p>
         <button class="more">More</button>
       </div>
-      <!--end .content-->
+    </div>
+
+    <div id="C7" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close-modal">X</span>
+        <div class="modal-body">
+          <img src="https://picsum.photos/1200/448?random=2" />
+          <div clas="modal-text">
+            <h3>African Grey Parrot</h3>
+            <p>The aftican grey parrot......</p>
+          </div>
+        </div>
+      </div>
     </div>
     <!--end .card-->
-    <div class="card six">
-      <div class="thumb"></div>
+
+    <div class="card eight clickable" data-modal="#C8">
+      <div class=" thumb"></div>
       <hr>
       <div class="card-content">
-        <h3>Card Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua.</p>
+        <h3>Calico Macaw</h3>
+        <p>A hybrid parrot, this bird is a combination of a Green-Winged and Military Macaw. Although they are not found
+          in the wild,
+          both the parent macaw specicies are located in the Amazon rain forest.
+        </p>
         <button class="more">More</button>
       </div>
-      <!--end .content-->
+    </div>
+
+    <div id="C8" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close-modal">X</span>
+        <div class="modal-body">
+          <img src="https://picsum.photos/1200/448?random=2" />
+          <div clas="modal-text">
+            <h3>African Grey Parrot</h3>
+            <p>The aftican grey parrot......</p>
+          </div>
+        </div>
+      </div>
     </div>
     <!--end .card-->
-    <div class="card seven">
+
+    <div class="card nine clickable" data-modal="#C9">
       <div class="thumb"></div>
       <hr>
       <div class="card-content">
-        <h3>Card Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua.</p>
+        <h3>Indian Ring-Necked</h3>
+        <p>Habiting primarily in India, this parrot gets its name from its very distinct black ring on its neck</p>
         <button class="more">More</button>
       </div>
-      <!--end .content-->
+    </div>
+
+    <div id="C9" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close-modal">X</span>
+        <div class="modal-body">
+          <img src="https://picsum.photos/1200/448?random=2" />
+          <div clas="modal-text">
+            <h3>African Grey Parrot</h3>
+            <p>The aftican grey parrot......</p>
+          </div>
+        </div>
+      </div>
     </div>
     <!--end .card-->
-    <div class="card eight">
+
+    <div class="card ten clickable" data-modal="#C10">
       <div class="thumb"></div>
       <hr>
       <div class="card-content">
-        <h3>Card Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua.</p>
+        <h3>Electus</h3>
+        <p>Living with both Cockatoos and Cockatiels, the Electus is primarily found in Australia and Indonesia. It is
+          unique amoung parrots for its large constast between male and female colors</p>
         <button class="more">More</button>
       </div>
-      <!--end .content-->
+    </div>
+
+    <div id="C10" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close-modal">X</span>
+        <div class="modal-body">
+          <img src="https://picsum.photos/1200/448?random=2" />
+          <div clas="modal-text">
+            <h3>African Grey Parrot</h3>
+            <p>The aftican grey parrot......</p>
+          </div>
+        </div>
+      </div>
     </div>
     <!--end .card-->
-    <div class="card nine">
-      <div class="thumb"></div>
+
+    <div class="card eleven clickable" data-modal="#C11">
+      <div class=" thumb"></div>
       <hr>
       <div class="card-content">
-        <h3>Card Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua.</p>
+        <h3>Marigold Lorikeet</h3>
+        <p>Native to south east Asia, the marigold lorikeet has very bright and colorful face and body feathers</p>
         <button class="more">More</button>
       </div>
-      <!--end .content-->
     </div>
-    <!--end .card-->
-    <div class="card ten">
-      <div class="thumb"></div>
-      <hr>
-      <div class="card-content">
-        <h3>Card Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua.</p>
-        <button class="more">More</button>
+    <div id="C11" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close-modal">X</span>
+        <div class="modal-body">
+          <img src="https://picsum.photos/1200/448?random=2" />
+          <div clas="modal-text">
+            <h3>African Grey Parrot</h3>
+            <p>The aftican grey parrot......</p>
+          </div>
+        </div>
       </div>
-      <!--end .content-->
     </div>
-    <!--end .card-->
-    <div class="card eleven">
+
+    <div class="card twelve clickable" data-modal="#C12">
       <div class="thumb"></div>
       <hr>
       <div class="card-content">
-        <h3>Card Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua.</p>
+        <h3>Military Macaw</h3>
+        <p>Found in the forests of Mexico, the military macaw gets its name from its dull and military looking plumage
+        </p>
         <button class="more">More</button>
       </div>
-      <!--end .content-->
     </div>
-    <!--end .card-->
-    <div class="card twelve">
-      <div class="thumb"></div>
-      <hr>
-      <div class="card-content">
-        <h3>Card Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua.</p>
-        <button class="more">More</button>
+    <div id="C12" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close-modal">X</span>
+        <div class="modal-body">
+          <img src="https://picsum.photos/1200/448?random=2" />
+          <div clas="modal-text">
+            <h3>African Grey Parrot</h3>
+            <p>The aftican grey parrot......</p>
+          </div>
+        </div>
       </div>
-      <!--end .content-->
     </div>
     <!--end .card-->
     </article>
     <footer>
-      <p>&copy; 2019, Eric York</p>
+      <p>&copy; 2019, Jarod Billings</p>
     </footer>
     <script src="js/page.js"></script>
 </body>

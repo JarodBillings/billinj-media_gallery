@@ -21,6 +21,7 @@ footer {
   color: #ddd;
   padding: 1em;
   text-align: center;
+  grid-column: 1/-1;
 }
 
 nav {
@@ -63,6 +64,7 @@ nav a {
   display: grid;
   grid-gap: 1em;
   grid-template-columns: 1fr;
+  margin: 0em .5em 0em .5em;
 }
 @media screen and (min-width: 550px) {
   .grid-container {grid-template-columns: repeat(2, 1fr);}
@@ -75,26 +77,73 @@ nav a {
 }
 .card {
   border: 1px solid #333;
+  text-align: center;
 }
 .card-content {
   padding: 1em;
 }
+
+.card-content h3 {
+  margin-bottom: .5em;
+  font-size: 125%;
+}
+
+.card  p{
+  text-align: left;
+}
 .one .thumb {
-  background-image: url('../img/coffee.jpg');
+  background-image: url('../pimg/card1.jpg');
 }
+
 .two .thumb {
-  background-image: url('../img/coffee.jpg');
+  background-image: url('../pimg/card2.jpg');
 }
+
+.three .thumb {
+  background-image: url('../pimg/card3.jpg');
+}
+
+.four .thumb {
+  background-image: url('../pimg/card4.jpg');
+}
+
+.five .thumb {
+  background-image: url('../pimg/card5.jpg');
+}
+
+.six .thumb {
+  background-image: url('../pimg/card6.jpg');
+}
+
+.seven .thumb {
+  background-image: url('../pimg/card7.jpg');
+}
+
+.eight .thumb {
+  background-image: url('../pimg/card8.jpg');
+}
+
+.nine .thumb {
+  background-image: url('../pimg/card9.jpg');
+}
+
+.ten .thumb {
+  background-image: url('../pimg/card10.jpg');
+}
+.eleven .thumb {
+  background-image: url('../pimg/card11.jpg');
+}
+.twelve .thumb {
+  background-image: url('../pimg/card12.jpg');
+}
+
+
 
 .slideshow{
   width: 100%;
   padding: .2em;
 }
 
-
-.slideshow img{
-  width: 100%;
-}
 
 .slideshow-wrap{
   position: relative;
@@ -104,18 +153,26 @@ nav a {
 
 .slide{
   display: none;
+  background: rgba(0,0,0,.7);
+  
 }
 
 .caption{
   background: rgba(0,0,0,.7);
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.caption-text{
+  background: rgba(0,0,0,.7);
   color: #EEE;
   font-size: 20px;
   padding: 8px 12px;
-  position: absolute;
   bottom: 8px;
   width: 100%;
   text-align: center;
 }
+
 
 .prev, .next{
   position: absolute;
@@ -139,8 +196,7 @@ nav a {
 .indicator{
   cursor:pointer;
   height: auto;
-  width: 20%;
-  margin: 0 2px;
+  width: auto;
   display: inline-block;
   background-color: #AAA;
   transition: all 200ms ease-in-out;
@@ -148,7 +204,9 @@ nav a {
 }
 
 .indicator img{
-  width: 100% !important;
+  height: 200px;
+  width: 300px;
+  object-fit: cover;
 }
 
 .active, .indicator:hover{
@@ -158,6 +216,11 @@ nav a {
 .slid-prev{
   text-align: center;
   margin: 10px 0px 20px 0;
+  display: flex;
+  max-width: 1440px;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .modal{
