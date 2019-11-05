@@ -32,6 +32,17 @@ nav {
   padding: 1em;
   flex-direction: column;
 }
+
+.nav-links{
+  position: relative;
+  top: 4px;
+  text-align: center;
+  color: var(--rev-text)
+}
+.fas{
+  padding-right: .5em;
+}
+
 @media screen and (min-width: 768px) {
   nav {flex-direction: row;}
 }
@@ -67,7 +78,10 @@ nav a {
   margin: 0em .5em 0em .5em;
 }
 @media screen and (min-width: 550px) {
-  .grid-container {grid-template-columns: repeat(2, 1fr);}
+  .grid-container {grid-template-columns: repeat(2, 1fr);} 
+}
+@media screen and (max-width: 550px){
+  .slideshow{display: none}
 }
 @media screen and (min-width: 768px) {
   .grid-container {grid-template-columns: repeat(3, 1fr);}
@@ -76,8 +90,13 @@ nav a {
   .grid-container {grid-template-columns: repeat(4, 1fr);}
 }
 .card {
-  border: 1px solid #333;
   text-align: center;
+  transition: box-shadow .5s;
+  border: 1px
+}
+
+.card:hover{
+  box-shadow: -1px 1px 6px 5px #777;
 }
 .card-content {
   padding: 1em;
@@ -256,7 +275,5 @@ nav a {
 
 .modal-text{
  grid-area: text;
- justify-items: center;
- justify-self: center;
  align-self: center;
 }

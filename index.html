@@ -9,15 +9,43 @@
   <link rel="stylesheet" href="css/sanitize.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 </head>
 
 <body>
   <nav class="topnav" id="main-nav">
-    <a href="#" class="nav-links">One</a>
-    <a href="#" class="nav-links">Two</a>
-    <a href="#" class="nav-links">Three</a>
-    <a href="#" class="nav-links">Four</a>
-    <a href="#" class="nav-links">Five</a>
+    <a href="#" class="nav-links">
+      <span class="nav-label">
+        <i class="fas fa-home"></i>
+        Home
+      </span>
+    </a>
+    
+    <a href="#" class="nav-links">
+      <span class="nav-label">
+        <i class="fas fa-file-download"></i>
+        Download
+      </span>
+    </a>
+    <a href="#" class="nav-links">
+      <span class="nav-label">
+        <i class="fas fa-file-upload"></i>
+        Upload
+      </span>
+    </a>
+    <a href="#" class="nav-links">
+      <span class="nav-label">
+        <i class="fas fa-camera"></i>
+        Credits
+      </span>
+    </a>
+    <a href="#" class="nav-links">
+      <span class="nav-label">
+        <i class="fas fa-search"></i>
+        <input type="search" placeholder="Search..."/>
+      </span>
+    </a>
     <a href="javascript:void(0);" class="nav-link trigram" onclick="navToggle()">&#9776;</a>
   </nav>
   <section class="slideshow">
@@ -80,7 +108,6 @@
       <div class="card-content">
         <h3>Lovebirds</h3>
         <p>Originating from Africa, the Lovebird gets its name from its strong bonding pair.</p>
-        <button class="more modal-button" data-modal="#C1">More</button>
       </div>
     </div>
 
@@ -104,7 +131,6 @@
       <div class="card-content">
         <h3>White Cockatoo</h3>
         <p>Found mainly on the islands of Indonesia, the White Cockatoo is a very friendly and affectionate parrot</p>
-        <button class="more">More</button>
       </div>
     </div>
 
@@ -128,7 +154,6 @@
       <div class="card-content">
         <h3>Congo African Grey</h3>
         <p>Occupying mainly the Congo forest of Africa, the African grey is a very intelligent parrot. </p>
-        <button class="more">More</button>
       </div>
     </div>
 
@@ -154,7 +179,6 @@
         <h3>Scarlet Macaw</h3>
         <p>Found in the tropical rain forest of Souther America, the scarlet macaw has a very bright and colorful
           plumage. </p>
-        <button class="more">More</button>
       </div>
     </div>
 
@@ -178,7 +202,6 @@
       <div class="card-content">
         <h3>Cockatiel</h3>
         <p>A distant cousin of the Cockatoo, Cockatiels are found in large flocks over the Australian continent</p>
-        <button class="more">More</button>
       </div>
     </div>
 
@@ -202,7 +225,6 @@
       <div class="card-content">
         <h3>Budgie</h3>
         <p>Also found in Australian is the Budgie is a very common house pet due to its colors and easy temperment</p>
-        <button class="more">More</button>
       </div>
     </div>
 
@@ -227,7 +249,6 @@
         <h3>Blue & Gold Macaw</h3>
         <p>Located mainly in the tropical rain forests, the B&G Macaw gets its name from its very prominant chest and
           back colors</p>
-        <button class="more">More</button>
       </div>
     </div>
 
@@ -254,7 +275,6 @@
           in the wild,
           both the parent macaw specicies are located in the Amazon rain forest.
         </p>
-        <button class="more">More</button>
       </div>
     </div>
 
@@ -278,7 +298,6 @@
       <div class="card-content">
         <h3>Indian Ring-Necked</h3>
         <p>Habiting primarily in India, this parrot gets its name from its very distinct black ring on its neck</p>
-        <button class="more">More</button>
       </div>
     </div>
 
@@ -303,7 +322,6 @@
         <h3>Electus</h3>
         <p>Living with both Cockatoos and Cockatiels, the Electus is primarily found in Australia and Indonesia. It is
           unique amoung parrots for its large constast between male and female colors</p>
-        <button class="more">More</button>
       </div>
     </div>
 
@@ -327,7 +345,6 @@
       <div class="card-content">
         <h3>Marigold Lorikeet</h3>
         <p>Native to south east Asia, the marigold lorikeet has very bright and colorful face and body feathers</p>
-        <button class="more">More</button>
       </div>
     </div>
     <div id="C11" class="modal" style="display: none;">
@@ -350,7 +367,6 @@
         <h3>Military Macaw</h3>
         <p>Found in the forests of Mexico, the military macaw gets its name from its dull and military looking plumage
         </p>
-        <button class="more">More</button>
       </div>
     </div>
     <div id="C12" class="modal" style="display: none;">
