@@ -245,8 +245,18 @@ nav a {
   animation: fadein .3s ease-in-out; /*-- sets animation properties: name, duration, easing --*/
 }
 
-.modal-content img {
-  margin-bottom: 1.5em;
-  width: 100%;
-  height: auto;
+.modal-body{
+  display: grid;
+  grid-template-areas: "img text";
+}
+
+.modal-img{
+  grid-area: img;
+}
+
+.modal-text{
+ grid-area: text;
+ justify-items: center;
+ justify-self: center;
+ align-self: center;
 }
